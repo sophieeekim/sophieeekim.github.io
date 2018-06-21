@@ -314,7 +314,7 @@ if (!('webkitSpeechRecognition' in window)) {
     if (final_transcript || interim_transcript) {
       showButtons('inline-block');
     }
-    for(int i=0;i<phrases.length;i++){
+    for(i=0;i<phrases.length;i++){
     if(final_transcript === phrases[i]){
       alert("That's right!");
     }
