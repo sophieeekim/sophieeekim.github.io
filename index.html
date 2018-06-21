@@ -80,6 +80,10 @@
     padding: 0;
   }
 </style>
+
+
+
+
 <h1 class="center" id="headline">
   <a href="http://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">
     Web Speech API</a> Demonstration</h1>
@@ -133,6 +137,12 @@
     <select id="select_dialect"></select>
   </div>
 </div>
+
+
+
+
+
+
 <script>
   var voice = navigator.mediaDevices.getUserMedia({ audio: true })
       .then(function(stream) {
@@ -287,6 +297,8 @@ if (!('webkitSpeechRecognition' in window)) {
     }
   };
 
+  var phrases = ['Hello','Hi','Good morning'];
+
   recognition.onresult = function(event) {
     var interim_transcript = '';
     for (var i = event.resultIndex; i < event.results.length; ++i) {
@@ -302,6 +314,11 @@ if (!('webkitSpeechRecognition' in window)) {
     if (final_transcript || interim_transcript) {
       showButtons('inline-block');
     }
+    for(int i=0;i<phrases.length;i++){
+    if(final_transcript === phrases[i]){
+      alert("That's right!");
+    }
+  }
   };
 }
 
