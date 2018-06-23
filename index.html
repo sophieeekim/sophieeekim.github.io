@@ -114,7 +114,7 @@
   <span id="interim_span" class="interim"></span>
   <p>
 </div>
-<div class="center">
+<!--div class="center">
   <div class="sidebyside" style="text-align:right">
     <button id="copy_button" class="button" onclick="copyButton()">
       Copy and Paste</button>
@@ -136,7 +136,7 @@
     &nbsp;&nbsp;
     <select id="select_dialect"></select>
   </div>
-</div>
+</div-->
 
 
 
@@ -297,7 +297,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
   };
 
-  var phrases = ['Hello','Hi','Good morning'];
+  var phrases = ['Alexa','Hi','Good morning'];
 
   recognition.onresult = function(event) {
     var interim_transcript = '';
@@ -316,7 +316,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
     for(i=0;i<phrases.length;i++){
     if(final_transcript === phrases[i]){
-      alert("That's right!");
+      alert("Yes, my lord");
     }
   }
   };
