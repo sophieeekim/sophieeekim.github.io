@@ -2,6 +2,9 @@
 <meta charset="utf-8">
 <title>Web Speech API Demo</title>
 <style>
+  body,html{
+    height: 100%;
+  }
   * {
     font-family: Verdana, Arial, sans-serif;
   }
@@ -49,7 +52,16 @@
   }
   .right {
 
-    width:100%;
+     /* The image used */
+    background-image: url("desktop.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .sidebyside {
     display: inline-block;
@@ -84,7 +96,7 @@
 </style>
 
 
-
+<body>
 
 <!--h1 class="center" id="headline">
   <a href="http://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">
@@ -114,7 +126,7 @@
 <div id="results">
   <span id="final_span" class="final"></span>
   <span id="interim_span" class="interim"></span>
-  <p>
+  
 </div>
 <div class="center">
   <div class="sidebyside" style="text-align:right">
@@ -140,6 +152,8 @@
   </div>
 </div>
 
+
+</body>
 
 
 
