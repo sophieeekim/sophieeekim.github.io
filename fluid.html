@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="layout.css">
+	<link rel="shortcut icon" href="images/logo_icon.ico" />
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="plugins/velocity.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+	<script type="text/javascript" src="ScrollMagic.js"></script>
+	<script type="text/javascript" src="plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript" src="plugins/jquery.ScrollMagic.js"></script>
+	<script type="text/javascript" src="plugins/animation.velocity.js"></script>
+	<script type="text/javascript" src="plugins/animation.gsap.js"></script>
+
+	<title>
+		Sophie Eunkyeol Kim
+	</title>
+</head>
+<body>
+	<div class="nav-bar">
+	<img class="logo" src="images/logo.svg"/ ">
+	<div class="nav">
+		<a href="index.html"><button class="nav-left-button">About</button></a>
+		<a href="work.html"><button class="nav-right-button">Work</button></a>
+	</div>
+	</div>
+
+	<div class="nav-article-bar">
+		<a href="vr-haptic.html"><button class="nav-left-button">Previous</button></a>
+		<a href=""><button class="nav-right-button">Next</button></a>
+		
+	</div>
+
+	<div class="grid-project">
+	<div class="project-title"><img src="images/fluid-thumb.jpg" /><div class="project-title-text"><h2><span  class="od-b">Creating Non-photorealistic Fluid Animation from a Single Image using Video Database</span></h2><p><i><span class="lg-b">Computer Science Capstone Project</span></i></p></div></div>
+	<div class="grid-project-text">
+		<div class="project-overview">
+			<h4 class="sub-title"><span>Project Overview</span></h4>
+			<div class="grid-overview">
+				<p><b><i>My Contribution</i></b></p>
+				<p>Developed image alphametting, video synthesis, and image blending function of the application </p>
+				<p><b><i>Project Size</i></b></p>
+				<p>Team of 3 for 16 weeks<br>Shin-young Mo (Programmer) <br> Shi-hyeong Ahn (Programmer)</p>
+				
+				<p><b><i>Tools</i></b></p>
+				<p>Python, OpenCV</p>
+				
+
+	
+
+
+			</div>
+		</div>
+		<div class="project-content">
+			<h4 class="sub-title"><span>Project Definition</span></h4>
+			<div class="content-text">
+				<img src="images/fluid/3.gif"/>
+				<p>It is quite easy to extract an image from a video, since a video consists of consecutive images called frames. In contrary, <span class="o-b">creating a video from a single image seems impossible</span> because a single image cannot create a totally new frame. According to recent studies, however, the possibility is increasing rapidly. 
+				</p>
+				<p>
+				In this project, we aim to construct a video database that is specialized for non-photorealistic images and create non-photorealistic fluid animation from a single image using that database.</p>
+
+
+			</div>
+			<h4 class="sub-title"><span>Necessity</span></h4>
+			
+			<div class="content-text">
+				<p> Several existing studies have made efforts to construct video databases for creating fluid animation from a single image, but those databases were specialized for photorealistic images. Thus, it is difficult and inefficient to apply those databases to non-photorealistic images such as paintings and illustrations. Systems that is suggested by existing studies involve many steps and their targets are users based of engineering knowledge. Therefore, user-centered system that maximizes efficiency and convenience for the general public when synthesizing the targeted image and videos from the database is needed.
+				</p>
+
+			</div>
+			<h4 class="sub-title"><span>Process</span></h4>
+
+			<div class="grid-four">
+				<div class="cell">
+					<p><i>Collecting Video Database</i></p>
+					<img src="images/fluid/1.png" />
+				</div>
+
+				<div class="cell">
+					<p><i>Average Image</i></p>
+					<img src="images/fluid/2.png" />
+				</div>
+
+				<div class="cell">
+					<p><i>Image Alpha Matting</i></p>
+					<img src="images/fluid/3.png" />
+				</div>
+
+				<div class="cell">
+					<p><i>Video Synthesis</i></p>
+					<img src="images/fluid/4.png" />
+				</div>
+			</div>
+
+
+			<div class="content-text">
+				<p><br><i>Technical Overview</i></p>
+				<img src="images/fluid/5.jpg" />
+				<h4 class="sub-title"><span>Collecting Video Database</span></h4>
+				<img src="images/fluid/6.jpg" />
+				<p>There are three criteria for video sample: <br> <b>1)</b> The position of the camera should be fixed and focus on the fluid. <br><b>2)</b> Fluid should be the main subject of the video. <br><b>3)</b> Video samples should be clear and high-definition. To increase the number of samples, we rotated and cropped the existing videos. We collected 150 videos and set the resolution to 400*360. 
+				</p>
+
+				<h4 class="sub-title"><span>Average Image</span></h4>
+
+				<p>For each video example, we compute the average image by averaging the frames to obtain representative appearance information. 
+				</p>
+				
+				<h4 class="sub-title"><span>Image Alpha Matting</span></h4>
+					<img src="images/fluid/7.gif" />
+
+					<p>We used watershed algorithm in order to extract the fluid part from the target image. Watershed algorithm is usually used for image segmentation in video processing. Users can designate the region of target image as fluid part with minimum mouse click. 
+				</p>
+
+				<h4 class="sub-title"><span>Video Synthesis</span></h4>
+				<p>The system computes the difference of frames in selected video example using average image. By adding the difference to the mask image of the target, we can get fluid animation on the target image. However, since there are differences in saturation the synthesized video looks awkward. In order to overcome the awkwardness, we used image blending and Gaussian blur technique.
+				</p>
+			
+				<h4 class="sub-title"><span>Simulation</span></h4>
+				<img src="images/fluid/8.gif" />
+				<p>This is the simulation video of our project. Examples of synthesized video are listed below.</p>
+				<div class="grid-two">
+				
+				<div><img src="images/fluid/0.gif" /><p>Lake 1</p></div>
+				<div><img src="images/fluid/1.gif" /><p>Lake 3</p></div>
+				<div><img src="images/fluid/2.gif" /><p>Lake 4</p></div>
+				<div><img src="images/fluid/3.gif" /><p>Waterfall 2</p></div>
+				<div><img src="images/fluid/4.gif" /><p>Waterfall 3</p></div>
+				</div>
+			</div>
+
+			
+			<h4 class="sub-title"><span>Evaluation</span></h4>
+			<div class="grid-two">
+					<img src="images/fluid/9.jpg"/>
+				<img src="images/fluid/10.jpg"/>
+				</div>
+			<div class="content-text">
+
+				<p>We conducted a user testing in order to test our system in terms of visual quality. We designed a study in which fifteen participants were asked to test our application with 8 different lake images and 7 cascade images. Then, the participants are required to rate the visual quality of the results on a scale 0 to 5. Majority of participants responded positively and most of the images are rated at over 3. There are some exceptional cases whose records are below average due to lack of database. Since we collected videos in which the speed of a current is fast, the database was not appropriate for images that have calm atmosphere. </p>
+
+				<img src="images/fluid/11.jpg" />
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<div class="footer">
+		<p class="center">All Rights Reserved Sophie Eunkyeol Kim 2019</p>
+	</div>
+</body>
+</html>

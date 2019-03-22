@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="layout.css">
+	<link rel="shortcut icon" href="images/logo_icon.ico" />
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="plugins/velocity.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+	<script type="text/javascript" src="ScrollMagic.js"></script>
+	<script type="text/javascript" src="plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript" src="plugins/jquery.ScrollMagic.js"></script>
+	<script type="text/javascript" src="plugins/animation.velocity.js"></script>
+	<script type="text/javascript" src="plugins/animation.gsap.js"></script>
+	<title>
+		Sophie Eunkyeol Kim
+	</title>
+</head>
+
+<body class="work">
+	<img class="logo" src="images/logo.svg"/><h4 class="blue work-title">Sophie Eunkyeol Kim</h4>
+	<div class="nav">
+		<a href="index.html"><button class="nav-left-button">About</button></a>
+		<a href="#"><button class="nav-right-button">Work</button></a>
+	</div>
+	<div class="grid-work-content">
+		<div class="work-filter">
+			<ul>
+				<li class="filter-icon-item"><img id="filter-icon" state="gallery" src="images/gallery.svg"/></li>
+				<li><a class="filter-item" id="filter-all" style="color:#4727F0;">All</a></li>
+				<li><a class="filter-item" id="filter-ux">UX/UI</a></li>
+				<li><a class="filter-item" id="filter-dev">Development</a></li>
+				<li><a class="filter-item" id="filter-visual">Visual Design</a></li>
+			</ul>
+		</div>
+		<div class="work-list" id="gallery">
+				<div class="work-thumb-text all ux"><div class="work-thumb">
+				<a href="alice-adventure.html"><img class="work-item" thumb-name="1" src="images/alice-thumb.jpg" /></a>
+				</div><div class="centered od-b" thumb-name="1"><h4><span>Alice's Adventure</span></h4><p><i>UX, UI</i></p></span></div></div>
+
+				<div class="work-thumb-text all ux" ><div class="work-thumb">
+				<img class="work-item" thumb-name="2" src="images/omen-thumb.jpg" />
+				</div><div class="centered od-b" thumb-name="2"><h4><span>Internship at HP inc.</span></h4><p><i>UX, UI</i></p></div></div>
+
+
+				<div class="work-thumb-text all ux" ><div class="work-thumb">
+				<img class="work-item" thumb-name="3" src="images/pic-thumb.jpg" />
+				</div><div class="centered od-b" thumb-name="3"><h4><span >Picture Yourself</span></h4><p><i>UX, UI</i></p></div></div>
+
+				<div class="work-thumb-text all dev ux"  ><div class="work-thumb">
+				<img class="work-item" thumb-name="4" src="images/bvw-thumb.jpg" />
+				</div><div class="centered od-b" thumb-name="4"><h4><span >Building Virtual Worlds</span></h4><p><i>Rapid Prototyping</i></p></div></div>
+
+				<div class="work-thumb-text all ux" ><div class="work-thumb">
+				<a href="sweepa.html"><img class="work-item" thumb-name="5"  src="images/sweepa-thumb.jpg" /></a>
+				</div><div class="centered od-b" thumb-name="5"><h4><span>Sweepa: Indoor Waste Monitoring System</span></h4><p><i>UX Research</i></p></div></div>
+
+				<div class="work-thumb-text all dev" ><div class="work-thumb">
+				<a href="vr-haptic.html"><img class="work-item" thumb-name="6"  src="images/vrhaptic-thumb.jpg" /></a>
+				</div><div class="centered od-b" thumb-name="6"><h4><span>VR Haptic Feedback</span></h4><p><i>Development</i></p></div></div>
+
+				<div class="work-thumb-text all dev"><div class="work-thumb">
+				<a href="fluid.html"><img class="work-item" thumb-name="7"  src="images/fluid-thumb.jpg" /></a>
+				</div><div class="centered od-b" thumb-name="7"><h4><span>Creating Fluid Animation from a Single Image</span></h4><p><i>Development</i></p></div></div>
+
+				<div class="work-thumb-text all visual"><div class="work-thumb">
+				<img class="work-item" thumb-name="8"  src="images/calender-thumb.jpg" />
+				</div><div class="centered od-b" thumb-name="8"><h4><span>Look and Say Sequence Calender</span></h4><p><i>Visual Design</i></p></div></div>
+				
+		</div>
+	</div>
+	<div class="contact">
+		<h4 class="sub-title"><span>Contacts</span></h4>
+		<p>Feel free to get in touch! I'm always eager to meet new people</p>
+		<a href="mailto:eunkyeok@andrew.cmu.edu"><img class="contact-icon" src="images/iconmonstr-email-2.svg"/></a>
+		<a href="https://www.linkedin.com/in/sophie-eunkyeol-kim/"><img class="contact-icon" src="images/iconmonstr-linkedin-3.svg"/></a>
+		<a href="https://dribbble.com/sophieeekim"><img class="contact-icon" src="images/iconmonstr-dribbble-1.svg"/></a>
+		<a href="https://www.instagram.com/eungraphic/"><img class="contact-icon" src="images/iconmonstr-instagram-11.svg"/></a>
+	</div>
+
+				<div class="work-thumb">
+	<div class="footer">
+		<p class="center">All Rights Reserved Sophie Eunkyeol Kim 2019</p>
+	</div>
+</body>
+<script type="text/javascript">
+	function toggleGallery(event){
+		var gallery = document.getElementById('gallery');
+		var target= event.target;
+		if(target.getAttribute('state') === 'gallery'){
+			target.setAttribute('src','images/list.svg');
+			target.setAttribute('state','list');
+			gallery.classList.add('grid-gallery');
+			console.log(target.getAttribute('state'));
+		} else if(target.getAttribute('state') === 'list') {
+			target.setAttribute('src', 'images/gallery.svg');
+			target.setAttribute('state','gallery');
+			gallery.classList.remove('grid-gallery');
+			console.log(target.getAttribute('state'));
+		}
+	}
+
+	function hoverThumb(event){
+		var target = event.target;
+		var caption = document.getElementsByClassName("centered");
+
+		if(target.getAttribute("thumb-name")) {
+			var l;
+			for(l=0; l<caption.length; l++){
+				if(target.getAttribute("thumb-name") == caption[l].getAttribute("thumb-name")){
+					caption[l].setAttribute("style","opacity:1;");
+				}
+			}
+		}
+	}
+
+	function leaveThumb(event){
+		var target = event.target;
+		var caption = document.getElementsByClassName("centered");
+
+		if(target.getAttribute("thumb-name")) {
+			var l;
+			for(l=0; l<caption.length; l++){
+				if(target.getAttribute("thumb-name") == caption[l].getAttribute("thumb-name")){
+					caption[l].setAttribute("style","opacity:0;");
+				}
+			}
+		}
+	}
+
+	function toggleFilter(event){
+		
+		var target = event.target;
+		var others = document.getElementsByClassName("filter-item");
+		var filter = target.getAttribute("id");
+		var selected_filter;
+
+		var j;
+		for(j=0; j < others.length; j++){
+			others[j].setAttribute("style", "color: #000;");
+		}
+		target.setAttribute("style", "color:#4727F0;");
+
+		switch (filter){
+			case "filter-all":
+				selected_filter = "all";
+				break;
+			case "filter-ux":
+			
+				selected_filter = "ux";
+				break;
+			case "filter-dev":
+				selected_filter = "dev";
+				break;
+			case "filter-visual":
+				selected_filter = "visual";
+				break;
+			default:
+				selected_filter ="all";
+				break;
+		}
+
+		var all_items = document.getElementsByClassName("work-thumb-text");
+		var filtered_items = document.getElementsByClassName(selected_filter);
+		var i;
+	
+		for(i=0; i< all_items.length; i++){
+			all_items[i].setAttribute("style", "display:none;");
+		}
+
+		for(i=0; i< filtered_items.length; i++){
+			filtered_items[i].setAttribute("style", "display:block;");
+		}
+
+	}
+
+		var filterIcon = document.getElementById("filter-icon");
+		var all = document.getElementById("filter-all");
+		var ux = document.getElementById("filter-ux");
+		var dev = document.getElementById("filter-dev");
+		var visual = document.getElementById("filter-visual");
+	
+		filterIcon.addEventListener("click", function(){toggleGallery(event)});
+		all.addEventListener("click", function(){toggleFilter(event)});
+		ux.addEventListener("click", function(){toggleFilter(event)});
+		dev.addEventListener("click", function(){toggleFilter(event)});
+		visual.addEventListener("click",function(){toggleFilter(event)});
+
+		var thumb = document.getElementsByClassName("work-thumb-text");
+		var k;
+		for (k=0; k< thumb.length; k++){
+			thumb[k].addEventListener("mouseover", function(){ hoverThumb(event)});
+			thumb[k].addEventListener("mouseout", function(){ leaveThumb(event)});
+		}
+
+
+
+</script>
+</html>
