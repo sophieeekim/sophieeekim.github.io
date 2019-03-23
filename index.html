@@ -1,29 +1,49 @@
 <!DOCTYPE HTML>
 <html>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta property="og:site_name" content="Sophie Eunkyeol Kim"/>
+<meta property="og:title" content="Design & Development Portfolio"/>
+<meta property="og:description" content="Hi, I'm a Interaction Desinger and Prototyper."/>
+<meta property="og:image" content="images/BI.svg">
 <head>
 	<link rel="stylesheet" href="layout.css">
 	<link rel="shortcut icon" href="images/logo_icon.ico" />
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<!-- <script type="text/javascript" src="plugins/velocity.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-	<script type="text/javascript" src="ScrollMagic.js"></script>
-	<script type="text/javascript" src="plugins/debug.addIndicators.js"></script>
-	<script type="text/javascript" src="plugins/jquery.ScrollMagic.js"></script>
-	<script type="text/javascript" src="plugins/animation.velocity.js"></script>
-	<script type="text/javascript" src="plugins/animation.gsap.js"></script>
- -->
 	<title>
 		Sophie Eunkyeol Kim
 	</title>
 </head>
-<body class="index" id="index">
+
+<body class="index" id="index" >
+	<!-- <svg style="position: absolute; top:0; left:0; width: 100%; height: 200%; z-index: -10;">
+		<defs>
+    <linearGradient id="grad1" x1="0" x2="0" y1="0" y2="1">
+    	<stop offset="0" stop-color="#FFBC2F"/>
+       <stop offset="1" stop-color="#8E8E93"/>
+      </linearGradient>
+      <filter id="blur" x="-20" y="-20" width="200" height="200">
+        <feGaussianBlur id="blur-value" in="SourceGraphic" stdDeviation="0" />
+    </filter>
+      <filter id='noise' x='0%' y='0%' width='100' height='100'>
+      <feTurbulence baseFrequency="0.7" type="fractalNoise"  />
+	</filter>
+  </defs>
+ 	 <polygon id="bg-1" points="-100,0 2000,0 2000,0 -100,0" style="height:100%; fill:url(#grad1); filter:url(#blur);" />
+	</svg> -->
+	<!-- <svg style="position: absolute; top:0; left:0; width: 100%; height: 200%; z-index: -10;">
+		<linearGradient id="grad2" x1="0" x2="0" y1="0" y2="1">
+    	<stop offset="0" stop-color="#FFBC2F"/>
+       	<stop offset="1" stop-color="#191964" stop-opacity="0"/>
+     	 </linearGradient>
+		<polygon points="-100,0 2000,0 2000,800 -100,800" style="fill:url(#grad2);" />
+	</svg> -->
 	<img class="logo" src="images/logo.svg"/>
 	<div class="nav">
 		<a href="#"><button class="nav-left-button">About</button></a>
 
 		<a href="work.html"><button class="nav-right-button">Work</button></a>
 	</div>
+
 	<div class="grid-about-content">
 	<div class="intro">
 		<img class="face" src="images/BI.svg" >
@@ -50,35 +70,6 @@
 		<p class="fadeAnim">I love getting my hands dirty with complex problems that can't be Googled. 
 		I iterate my design options until the proper solution emerges. From sketching on paper to coding high-fidelity prototype, I use various tools to evaluate the design decisions and to make the solution work.</p>
 	</div>
-	<!-- <div class="about-3">
-		<h4 id="dreamer" >I'm a <i>Dreamer</i></h4>
-		<p id="dreamer-content" style="opacity:0;">I'm highly interested in extending human experience boundaries by combining different perspectives from interaction design and computer science.</p>
-	</div> -->
-
-	<!-- <div class="practice-area">
-		<h4 id="practice"><i>Practice Areas</i></h4>
-		<ul id="practice-content" style="opacity: 0;">
-			<li>Interaction Design</li>
-			<li>Prototyping</li>
-			<li>VR, AR, MR</li>
-		</ul>
-	</div>
-	<div class="skill">
-		<h4 id="skill"><i>Skills</i></h4>
-		<ul id="skill-content" style="opacity: 0;"><i>Design</i>
-			<li>Photoshop | Illustrator</li>
-			<li>Premiere | AfterEffects</li>
-			<li>Sketch</li>
-			<li>Maya</li>
-			<i>Develop</i>
-			<li>C | C++ | C# | Java | Python</li>
-			<li>HTML | CSS | JavaScript | PHP</li>
-			<li>Unity3D</li>
-			<li>Arduino</li>
-			<li>OpenGL | OpenCV</li>
-			<li>Perforce | Git</li>
-		</ul>
-	</div> -->
 	
 
 	<div class="selected-works">
@@ -123,40 +114,7 @@
 
 	<script type="text/javascript" src="scroll.js"></script>
 
-	<!-- <script type="text/javascript">
-		
-			var controller = new ScrollMagic.Controller({loglevel:1});
-
-			// var tween = TweenMax.to(".intro", 0.2, {opacity: 1});
-
-			// var scene = new ScrollMagic.Scene({triggerElement:"#name", duration:600, loglevel:1})
-			// .setTween(tween)
-			// .addTo(controller);
-
-			var scene = new ScrollMagic.Scene({triggerElement:"#designer", reverse:false})
-			.setVelocity("#designer-content", {opacity : 1 }, { duration : 500, delay : 50, easing : "ease-in-out" })
-			.addTo(controller);
-
-			// var scene= new ScrollMagic.Scene({triggerElement:"#designer", loglevel: 3, duration: 1000})
-			// .on("progress", function (e) {
-			// 	document.getElementById("designer-content").style.filter = "blur(" + (e.progress.toFixed(1)) * (-10) + "px)";
-			// 	document.getElementById("designer-content").style.opacity = (e.progress.toFixed(1)) * 2;
-			// })
-			// .addIndicators()
-			// .addTo(controller);
-
-			var scene = new ScrollMagic.Scene({triggerElement:"#developer", reverse:false})
-			.setVelocity("#developer-content", {opacity : 1}, { duration : 500, delay : 50, easing : "ease-in-out" })
-			.addTo(controller);
-
-			var scene = new ScrollMagic.Scene({triggerElement:"#dreamer", reverse:false})
-			.setVelocity("#dreamer-content", {opacity : 1}, { duration : 500, delay : 50, easing : "ease-in-out" })
-			.addTo(controller);
-
-			
-
-
-	</script> -->
+	
 
 
 </body>

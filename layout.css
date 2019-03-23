@@ -92,6 +92,8 @@
 .work {
 	/*background-image: url("images/bg2.png");*/
 }
+
+
 button {
 font-family: Avenir;
  font-weight: normal;
@@ -692,6 +694,10 @@ margin-top:10%;
 	grid-template-areas: 
 	"a a a a"
 }
+
+.grid-four img {
+	width: 100%;
+}
 .grid-project {
 	margin:0;
 	display: grid;
@@ -820,7 +826,7 @@ margin-top:10%;
 		font-size: 12px;
 	}
 	.nav-left-button, .nav-right-button{
-		font-size: 12px;
+		font-size: 15px;
 		margin:10px;
 	}
 	.logo {
@@ -956,7 +962,7 @@ margin-top:10%;
 	}
 
 	.nav-left-button, .nav-right-button{
-		font-size: 15px;
+		font-size: 20px;
 		margin:20px;
 	}
 	.logo {
@@ -993,7 +999,7 @@ margin-top:10%;
 		font-size: 14px;
 	}
 	.nav-left-button, .nav-right-button {
-		font-size: 16px;
+		font-size: 20px;
 		margin:20px;
 	}
 	.grid-overview{
