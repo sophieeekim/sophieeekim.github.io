@@ -93,7 +93,11 @@
 	/*background-image: url("images/bg2.png");*/
 }
 
-
+body {
+	top:0;
+	left:0;
+	right: 0;
+}
 button {
 font-family: Avenir;
  font-weight: normal;
