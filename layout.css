@@ -690,7 +690,11 @@ margin-top:10%;
 	width: 100%;
 }
 
-
+.grid-two-icon {
+	display: block;
+	margin: auto !important;
+	width: 30% !important;
+}
 .grid-four {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -767,6 +771,12 @@ margin-top:10%;
 	
 }
 
+.caption {
+	text-align: center;
+	font-style: italic;
+	font-size: 50% !important;
+
+}
 .box-shadow {
 	box-shadow: 0px 0px 15px #D0D0D0;
 	margin: 15px;

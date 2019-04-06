@@ -65,30 +65,45 @@
 
 			</div>
 			<h4 class="sub-title"><span>Necessity</span></h4>
-			
+			<div class="grid-two">
+				<div>
+					<img class="grid-two-icon" src="images/vr-haptic/2.png"/>
+					<p><i>Cordless Experience</i></p>
+					<p> There were several existing works regarding VR interface, but in majority of those works, the users could not utilize the space fully enough to move freely due to electrical cords. In contrary, we developed a system that provides cordless communication between Android and Kinect. In most cases of existing works, Oculus Rift was used so that the electrical cords were unavoidable. We designed WiFi communication between Android application and Kinect thus users can experience wireless interface using cordless HMD such as Google Cardboard.</p>
+				</div>
+				<div>
+					<img class="grid-two-icon"  src="images/vr-haptic/3.png"/>
+					<p><i>Wearable device with detailed feedback</i></p>
+					<p>Existing controllers used as an input/output device for VR provide haptic feedback with no variation to users, since controller vibrate as a whole. However, we planed to develop a wearable output device which can provide various haptic feedback. According to the position of vibration motor, users can experience diverse feedbacks. For example, when a user touches a certain object in VR scene with his/her two fingers, only two vibration motors attached to those fingers will vibrate. This suggests possibilities of developing more realistic and natural output devices for VR.
+					</p>
+				</div>
+			</div>
 			<div class="content-text">
-				<p><i>Cordless Experience</i></p>
-				<p> There were several existing works regarding VR interface, but in majority of those works, the users could not utilize the space fully enough to move freely due to electrical cords. In contrary, we developed a system that provides cordless communication between Android and Kinect. In most cases of existing works, Oculus Rift was used so that the electrical cords were unavoidable. We designed WiFi communication between Android application and Kinect thus users can experience wireless interface using cordless HMD such as Google Cardboard.</p>
-				<p><i>Wearable device with detailed feedback</i></p>
-				<p>Existing controllers used as an input/output device for VR provide haptic feedback with no variation to users, since controller vibrate as a whole. However, we planed to develop a wearable output device which can provide various haptic feedback. According to the position of vibration motor, users can experience diverse feedbacks. For example, when a user touches a certain object in VR scene with his/her two fingers, only two vibration motors attached to those fingers will vibrate. This suggests possibilities of developing more realistic and natural output devices for VR.
-				</p>
+				
+				
 
 			</div>
 			<h4 class="sub-title"><span>Solution</span></h4>
+			<img class="single-img" src="images/vr-haptic/1.png" />
 			<div class="content-text">
+
 				<p><i>Input Device</i></p>
 				<p>Kinect sensor detects the users’ movements and hand gestures. Then, it conveys the input signals to PC. In PC, Unity project analyzes the signals and sends those input values to the VR scene of the Android application via wifi connection. Since the Android application cannot receive the input values of Kinect sensor directly, network communication between PC and Android is inevitable. 
 				</p>
 				<p>In order to make the input device, we confirmed that the local host can convey PC client data to local host server successfully. Then, we installed Kinect extension plugin in Unity so that the PC client can analyze the input signals that comes from the Kinect sensor. Analyzed data is sent to Android application and is used as input values of VR scene.
 				</p>
 				<p><i>Output Device</i></p>
+				<img src="images/vr-haptic/5.png"/>
+				<img src="images/vr-haptic/6.png"/>
 				<p>We developed the wearable output device using Arduino Uno and vibration motor. Arduino gives users different haptic feedbacks depending on the specific conditions through Bluetooth communication between VR Android application and Arduino. 
 				</p>
+				<div><img src="images/vr-haptic/7.gif"/><p class="caption">Testing Bluetooth communication from Android</p></div>
 				<p>First of all, we connected Bluetooth module to Arduino Uno and checked if PC can detect and communicate with Arduino through Bluetooth module. Since there is no library that is able to handle Bluetooth communication in Unity, we designed our own Bluetooth plugin using Android Bluetooth function with Java. Then, we built an Android application using Unity that can control the vibration motors of Arduino. We attached the Arduino on gloves and installed the vibration motors on the tip of each finger.
 				</p>
 			</div>
 			<h4 class="sub-title"><span>Simulation</span></h4>
 			<div class="content-text">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/QM3-BRUdU3A?rel=0" frameborder="0" allowfullscreen></iframe>
 				<p>This is the simulation video of our project. The background of the simulation is the universe with objects that illustrate various planets. The input device of our system, Kinect sensor can detect and recognize whether a player clench his/her fist or open his/her hand. Thus, the player can touch the planets, hold them and move them. White ring-shaped indicators signify the current position of the player’s hands in the VR scene. When the player drags or drops a planet, vibration motors are activated. Different length of vibration is activated depending on the size of the planet. If the sun is dragged, the vibration length will be longer than that of Earth. Many different variations can be added to the system. For example, vibration motors can be activated not simultaneously but sequentially with a particular order, since the vibration motors are attached to each fingertip. Also, depending on the conditions, vibration motors can be partially activated.
 				</p>
 			</div>
