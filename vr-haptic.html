@@ -60,7 +60,7 @@
 			<h4 class="sub-title"><span>Project Definition</span></h4>
 			<div class="content-text">
 				<img src="images/vr-haptic/0.jpg" />
-				<p>This project aims to improve current VR interface by designing a new input and output device. Aside from HMD (Head Mounted Display), several input devices such as keyboard and gamepad are being used. However, most of these devices are not appropriate for VR interface since they are not intuitive and require users to pay attention to the devices constantly. For instance, if a keyboard is used as an input device for a VR game, the player should remember the position of the buttons and have a restricted space to move. Thus, in order to fully utilize the space and increase the sense of reality we developed an input device with Kinect sensor so that the user can naturally send input values using hand gestures. In addition, there are few output devices that could give a feedback to the users experiencing virtual reality. To enhance VR interface with a realistic feedback, we designed an output device using Arduino and vibration motor.</p>
+				<p>This project aims <span class="o-b">to improve current VR interface by designing a new input and output device.</span> Aside from HMD (Head Mounted Display), several input devices such as keyboard and gamepad are being used. However, most of these devices are not appropriate for VR interface since they are not intuitive and require users to pay attention to the devices constantly. For instance, if a keyboard is used as an input device for a VR game, the player should remember the position of the buttons and have a restricted space to move. Thus, in order to fully utilize the space and increase the sense of reality we developed an input device with Kinect sensor so that the user can naturally send input values using hand gestures. In addition, there are few output devices that could give a feedback to the users experiencing virtual reality. To enhance VR interface with a realistic feedback, we designed an output device using Arduino and vibration motor.</p>
 
 
 			</div>
@@ -90,6 +90,7 @@
 				<p><i>Input Device</i></p>
 				<p>Kinect sensor detects the users’ movements and hand gestures. Then, it conveys the input signals to PC. In PC, Unity project analyzes the signals and sends those input values to the VR scene of the Android application via wifi connection. Since the Android application cannot receive the input values of Kinect sensor directly, network communication between PC and Android is inevitable. 
 				</p>
+				<img src="images/vr-haptic/4.png"/>
 				<p>In order to make the input device, we confirmed that the local host can convey PC client data to local host server successfully. Then, we installed Kinect extension plugin in Unity so that the PC client can analyze the input signals that comes from the Kinect sensor. Analyzed data is sent to Android application and is used as input values of VR scene.
 				</p>
 				<p><i>Output Device</i></p>
@@ -103,7 +104,7 @@
 			</div>
 			<h4 class="sub-title"><span>Simulation</span></h4>
 			<div class="content-text">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/QM3-BRUdU3A?rel=0" frameborder="0" allowfullscreen></iframe>
+				<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QM3-BRUdU3A?rel=0" frameborder="0" allowfullscreen></iframe></div>
 				<p>This is the simulation video of our project. The background of the simulation is the universe with objects that illustrate various planets. The input device of our system, Kinect sensor can detect and recognize whether a player clench his/her fist or open his/her hand. Thus, the player can touch the planets, hold them and move them. White ring-shaped indicators signify the current position of the player’s hands in the VR scene. When the player drags or drops a planet, vibration motors are activated. Different length of vibration is activated depending on the size of the planet. If the sun is dragged, the vibration length will be longer than that of Earth. Many different variations can be added to the system. For example, vibration motors can be activated not simultaneously but sequentially with a particular order, since the vibration motors are attached to each fingertip. Also, depending on the conditions, vibration motors can be partially activated.
 				</p>
 			</div>

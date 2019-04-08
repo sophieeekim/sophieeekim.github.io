@@ -647,7 +647,22 @@ margin-top:10%;
 
 
 /* work project individual page */
+.video {
+	position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+	
+}
 
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+}
 
 .nav-bar {
 	position: fixed;
@@ -705,6 +720,12 @@ margin-top:10%;
 
 .grid-four img {
 	width: 100%;
+}
+
+.grid-four-icon {
+	display: block;
+	margin: auto !important;
+	width: 80% !important;
 }
 .grid-project {
 	margin:0;
