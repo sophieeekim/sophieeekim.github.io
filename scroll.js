@@ -2,16 +2,20 @@
 var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "" ) === "CSS1Compat");
 var fadeItems = document.getElementsByClassName('fadeAnim');
+
 var bg1 = document.getElementById('bg-1');
 var blur = document.getElementById('blur-value');
 var downToggle = 'false';
 var upToggle = 'false';
+
+var scrollDown = document.getElementById('scrolldown');
+
 for(var j=0; j < fadeItems.length; j++ ){
 	fadeItems[j].setAttribute('fade', 'false');
 	fadeItems[j].setAttribute('style','opacity: 0;');
 }
 
-var scrollStop = 800;
+
 var lastScrollTop = 0;
 var offset1 = 0; //smaller offset
   var offset2 = 0; //bigger offset
@@ -21,12 +25,14 @@ window.addEventListener('scroll', function(event) {
 	var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
 	for(var i =0; i < fadeItems.length; i++) {
-		if( (fadeItems[i].offsetTop - y) < 500){
+		if( (fadeItems[i].offsetTop - y) < 750){
 			toggleFadeIn(fadeItems[i]);
 		}
 	}
 
-	
+	toggleFadeOut(scrollDown);
+
+
 	// if(y>lastScrollTop){
 	// 	if(downToggle == 'false') {
 	// 		upToggle = 'true';
@@ -99,6 +105,15 @@ function toggleFadeIn(target){
 		target.setAttribute('style','animation: fadeIn 1s ease-in;');
 		target.setAttribute('fade','true');
 	}
+}
+
+function toggleFadeOut(target){
+	if(target.getAttribute('fade') == 'true') {
+		target.setAttribute('style','animation: fadeOut 1s ease-in; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards;');
+		target.setAttribute('fade','false');
+	}
+
+	// target.setAttribute('style','opacity: 0;');
 }
 
 function stickyFunc(target){
