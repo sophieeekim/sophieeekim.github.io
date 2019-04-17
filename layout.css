@@ -79,7 +79,7 @@
 	right:100px;
 	z-index: 10;
 	animation: scrollAnim 1s ease-out infinite;
-	
+
 }
 
 @keyframes scrollAnim {
@@ -906,6 +906,7 @@ margin-top:10%;
 		margin: auto !important;
 		left:0;
 		right: 0;
+		bottom: 10% !important;
 	}
 	.scrolldown p {
 		text-align: center;
