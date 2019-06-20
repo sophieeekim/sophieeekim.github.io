@@ -73,11 +73,12 @@
 }
 
 .scrolldown {
+	background-color: #111;
 	opacity: 1;
 	position: absolute;
 	bottom:30%;
 	right:100px;
-	z-index: 10;
+	z-index: -10;
 	animation: scrollAnim 1s ease-out infinite;
 
 }
@@ -143,6 +144,7 @@ cursor: pointer;
   border: none;
   background:none;
 }
+
 p {
   /*font-family: Palatino-Roman;*/
   font-family: Avenir;
@@ -327,6 +329,7 @@ font-family: Avenir;
 	transition: 0.5s;
 }
 .link-button{
+	cursor: pointer;
 	padding:1.5% 3% 1.5% 3%;
 	font-family: Avenir;
   font-weight: normal !important;
@@ -407,6 +410,7 @@ font-family: Avenir;
 
 .intro{
 	grid-area:intro;
+	
 }
 .note-anim {
 	grid-area: note;
@@ -907,6 +911,7 @@ margin-top:10%;
 		left:0;
 		right: 0;
 		bottom: 10% !important;
+
 	}
 	.scrolldown p {
 		text-align: center;
