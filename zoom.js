@@ -6,6 +6,11 @@ var slidePrevious = document.getElementById('slide-previous');
 var slideNext = document.getElementById('slide-next');
 var currentSlide = 14;
 
+
+for (var l=0; l < modalImages.length; l++) {
+	modalImages[l].setAttribute('fade','false');
+}
+
 slidePrevious.addEventListener('click', function(event) {
 	if(currentSlide == 0) {
 		currentSlide = 13;
@@ -52,14 +57,15 @@ for( var i=0; i<images.length; i++){
 		for (var j=0; j<images.length; j++){
 			if(j == slide){
 				modalImages[slide].setAttribute('style','display: block;');
-
+				
 			} else {
 				modalImages[j].setAttribute('style','display: none;');
 			}
 		}
-		modal.setAttribute('style','display:block; opacity:1;');
-		//toggleFadeIn(modal);
-		console.log(modal.getAttribute('style'));
+		
+		modal.setAttribute('style','display:block;');
+		modal.classList.add("fade-in");
+		modal.classList.remove("fade-out");
 		document.body.setAttribute('style','overflow:hidden;');
 		}
 	});
@@ -71,7 +77,9 @@ for( var i=0; i<images.length; i++){
 for( var k=0; k<images.length; k++){
 	modalImages[k].addEventListener('click', function(event){
 		if(modalSwitch == true) {
-			modal.setAttribute('style','display:none;');
+			modal.classList.remove("fade-in");
+			modal.classList.add("fade-out");
+			setTimeout(function(){modal.setAttribute('style','display:none;');}, 500);
 			document.body.setAttribute('style','overflow:auto;');
 			modalSwitch = false;
 		}
@@ -80,16 +88,3 @@ for( var k=0; k<images.length; k++){
 }
 
 
-function toggleFadeIn(target){
-	if(target.getAttribute('fade') == 'false') {
-		target.setAttribute('style','animation: fadeIn 1s ease-in;');
-		target.setAttribute('fade','true');
-	}
-}
-
-function toggleFadeOut(target){
-	if(target.getAttribute('fade') == 'true') {
-		target.setAttribute('style','animation: fadeOut 1s ease-in; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards;');
-		target.setAttribute('fade','false');
-	}
-}
