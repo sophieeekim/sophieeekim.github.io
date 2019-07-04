@@ -790,6 +790,29 @@ margin-top:10%;
 	margin: auto !important;
 	width: 30% !important;
 }
+.grid-three {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2%;
+	grid-template-areas: 
+	"a a a"
+}
+
+.grid-three img {
+	width: 100%;
+}
+
+.grid-three-icon {
+	display: block;
+	margin: auto !important;
+	width: 50% !important;
+}
+
+.grid-three-img {
+	display: block;
+	margin: auto !important;
+	width: 80% !important;
+}
 .grid-four {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -885,6 +908,90 @@ margin-top:10%;
 .zoom {
 	cursor: pointer;
 }
+
+
+.arrow-left, .arrow-right {
+	top:43%;
+	position: absolute;
+	border: solid #dfdedf !important;
+  border-width: 0 0.5vmin 0.5vmin 0 !important;
+  display: inline-block;
+  background: transparent !important;
+  padding: 1vmin;
+  transition: all 200ms ease;
+  	text-decoration: none;
+}
+.arrow-left:focus, .arrow-right:focus{
+	outline: none;
+
+}
+.arrow-left:before, .arrow-right:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%,-60%) rotate(45deg);
+	width: 200%;
+	height: 200%;
+}
+.arrow-left:hover, .arrow-right:hover {
+	background: transparent;
+	border-color: orange !important;
+	box-shadow: 0.5vmin 0.5vmin 0 #dfdedf;
+}
+
+.arrow-left {
+	left: -3%;
+	transform: translate3d(0,-50%,0) rotate(135deg);
+
+}
+.arrow-right {
+	right: -3%;
+	transform: translate3d(0,-50%,0) rotate(-45deg);
+}
+
+.slide-window{
+	width: 100%;
+	/*background-color: #dfdedf;*/
+	margin-top:3%;
+	margin-bottom: 3%;
+	position: relative;
+}
+.slide-view{
+	/*background-color: #dfdddf;*/
+	overflow: hidden;
+
+	
+}
+
+.slide-images{
+	width: 100%;
+	display: none;
+}
+
+.slide-selected {
+	display: block;
+}
+.slide-dots{
+	margin-top:5%;
+	text-align: center;
+}
+
+.dot {
+	cursor: pointer;
+  margin: 1%;
+  height: 8px;
+  width: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-selected {
+	background-color: #666 !important;
+}
+
+
 #modal {
 	background-color: #dfdedf;
 	top:0;
@@ -945,12 +1052,12 @@ margin-top:10%;
   	font-stretch: normal;
   	line-height: normal;
   	letter-spacing: normal;
- 	text-align: left;
+ 	text-align: right;
  	color: #4727F0;
   	text-decoration: none;
  	border: none;
   	background: none;
-  	float:left;
+  	float:right;
  	text-shadow: 0px 0px 0px #ECA000;
 	transition: 0.5s;
 	position: absolute;
@@ -1140,6 +1247,11 @@ margin-top:10%;
 	/*grid-row-gap: 1%;*/
 	grid-template-areas: 
 	"a"
+	}
+
+	.grid-three {
+	grid-template-columns: auto;
+	grid-template-areas: "a"
 	}
 
 	.grid-two {

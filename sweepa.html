@@ -69,7 +69,7 @@
 			<h4 class="sub-title"><span>Project Definition</span></h4>
 			<div class="content-text">
 	
-				<p>Sweepa is an indoor waste monitoring system that aims to increase convenience and work efficiency of cleaning staff by measuring the fill-level of trash cans and analyzing data. 
+				<p><span class="o-b">Sweepa is an indoor waste monitoring system that aims to increase convenience and work efficiency of cleaning staff by measuring the fill-level of trash cans and analyzing data.</span>
 				</p>
 				<p>
 				Recently, the volume of household and non-household waste has increased through the rapid industrial and economic development in Korea and the government has put efforts such as a volume-based waste fee system to mitigate environmental problems. While research studies mainly have focused on effective waste management and recycling behavior in a systematic way, there is relatively little research on human resources who actually collect waste and handle recycling work. In this project, we suggest an indoor waste monitoring system that seeks to provide cleaning staffs with a more effective work flow.</p>
@@ -118,7 +118,7 @@
 
 				<h4 class="sub-title"><span>Exploratory Research</span></h4>
 
-				<p>We adopted a user-centered design methodology and conducted a formative evaluation with the cleaning staffs to better understand user needs and identify design requirements. We started our research by investigating how the current cleaning system is operated in indoor spaces and under what circumstances cleaning staff members have during their work. We interviewed 4 cleaning staff members, 2 women and 2 men at International Yonsei University Campus. We received the permission from the Yonsei University administration office and contacted the commander of the cleaning staff team to arrange an interview with cleaning staff. Interviews were semi-structured, open-end ed and covered three topics: (a) general information about the participants (b) roles and work routines as cleaning staff members (c) work environment and equipment, they use interviews lasted about 30 minutes and were recorded via mobile phone audio. After gathering and analyzing data from interviews, we could come up with design requirements for the implementation of the system. 
+				<p>We adopted a user-centered design methodology and conducted a formative evaluation with the cleaning staffs to better understand user needs and identify design requirements. We started our research by investigating how the current cleaning system is operated in indoor spaces and under what circumstances cleaning staff members have during their work. <span class="o-b">We interviewed 4 cleaning staff members, 2 women and 2 men at International Yonsei University Campus.</span> We received the permission from the Yonsei University administration office and contacted the commander of the cleaning staff team to arrange an interview with cleaning staff. Interviews were semi-structured, open-end ed and covered three topics:<span class="o-b"> (a) general information about the participants (b) roles and work routines as cleaning staff members (c) work environment and equipment they use. </span> Interviews lasted about 30 minutes and were recorded via mobile phone audio. After gathering and analyzing data from interviews, we could come up with design requirements for the implementation of the system. 
 				</p>
 				
 				<h4 class="sub-title"><span>Analyze</span></h4>
@@ -174,11 +174,30 @@
 						Head managers can use the data to equally distribute workload and for different purposes
 					</p></div>
 				</div>
+
+				
 			<div class="content-text">
 				
 				<p><i>Visual Map on a Mobile Device and a Wall Display</i></p>
- 				<p>Through a visual map that shows fill-level of trashcans, cleaning staff members can have real-time feedback of the locations of the trashcans that need to be emptied. Also, the colors of trashcans accordingly change depending on the fill-level of trash: green (20 % or less) yellow (21% -79%) red (80% - 100%) to notify cleaning staff specific status of each trashcan. Cleaning staff member can check different floors to see other status of other trashcans and check their location through direction icon which becomes beneficial when making their own efficient work routes. From the earlier user study, a cleaning staff member pointed out that he easily forgets information; therefore, the system should help cleaning staff members to remember information anytime. To solve this, Sweepa came up with two ways for both female and male cleaning staff members by making the map accessible at all times, which enables work efficiency for the cleaning staff. The application flow of user interface is listed below.
+ 				<p><span class="o-b">Through a visual map that shows fill-level of trashcans, cleaning staff members can have real-time feedback of the locations of the trashcans that need to be emptied.</span> Also, the colors of trashcans accordingly change depending on the fill-level of trash: <span class="o-b"> green (20 % or less) yellow (21% -79%) red (80% - 100%) </span> to notify cleaning staff specific status of each trashcan. Cleaning staff member can check different floors to see other status of other trashcans and check their location through direction icon which becomes beneficial when making their own efficient work routes. From the earlier user study, a cleaning staff member pointed out that he easily forgets information; therefore, the system should help cleaning staff members to remember information anytime. To solve this, Sweepa came up with two ways for both female and male cleaning staff members by making the map accessible at all times, which enables work efficiency for the cleaning staff. The application flow of user interface is listed below.
 				</p>
+			</div>
+				<div class="grid-three">
+					<div>
+						<img src="images/sweepa/10.png">
+						<p class="caption">Outside view of the buildings. </p>
+					</div>
+
+					<div>
+						<img src="images/sweepa/11.png">
+						<p class="caption">Inside view of a building.  </p>
+					</div>
+					<div>
+						<img src="images/sweepa/12.png">
+						<p class="caption">Percentage option provides more accurate fill-level information to users. </p>
+					</div>
+				</div>
+			<div class="content-text">
 				<p>
 				By putting the map on portable devices, female staff can receive information without any spatial and time limitations. Just by a simple installation process of a mobile application, the staff will easily access to the map not having to make additional purchases for extra digital device. The visual map on display will work as the mini Intranet for the workers, and since smartphones became a daily necessity and almost everyone knows how to use a smartphone, any form of switching cost, such as timely adaptation process, will not occur. </p>
 				<p>
@@ -190,8 +209,16 @@
 
 				<h4 class="sub-title"><span>Prototype</span></h4>
 				<p>Sweepa is built using ultrasonic distance sensor. When the trash fills up, the ultrasonic distance sensor attached to the top of the trashcan detects the level and send its signal to the Arduino microchip. This information will be transferred into the computer which will then be uploaded on a web page. An Android application will display the same webview sharing the same internet network. Once the information is available on the Android application, users are able to check real time of the current states of the trashcan within their designated areas through their phones.This prototype proves efficiency and effectiveness of the Sweepa project in terms of decreased time in work completion and visually organized information. </p>
+
+			</div>
+				<img class="single-img" src="images/sweepa/7.jpg">
+			<div class="content-text">
+				<img class="single-img" src="images/sweepa/8.jpg">
 				<p><i>Hardware Implementation</i></p>
 				<p>An Arduino board and an ultrasonic distance sensor are installed in the inner side of a trashcan facing downward. This sensor is connected to an Arduino Ethernet Shield. Then, the sensor calculates the distance from the top of the trashcan to the surface of the trash through ultrasonic sound waves. The data is transferred to the Arduino and Arduino converts the data into a more usable form to create a web page which displays the sensor inputs. Arduino Ethernet Shield can be replaced by a Wifi Shield which enables more flexibility in locating the trashcans. </p>
+			</div>
+				<img class="single-img" src="images/sweepa/9.gif">
+			<div class="content-text">
 				<p><i>Software Implementation</i></p>
 				<p>The Arduino microprocessor is programmed in C language to take a reading of the distance from the sensor to the bottom of the trashcan. When the Arduino receives an input signal stating that the trash has reached a certain pre-determined threshold, it will send a data output to the computer terminal view. In this case, the pre-determined threshold is one second. Then, the Arduino program creates a web view on the certain IP address that can be accessed by only one network. Thus, this IP address enables users to make their own network. As the Arduino program refreshes the web view every second, it automatically updates the result value of the sensor. The web view consists of a floor map of the building and dots that represent the trashcans. The dots change their colors corresponding to the result value which the Arduino server sends. For this prototype, the depth of the trashcan is 70cm, and the Arduino is programmed to change color of the dots from green to orange when the depth is under 50cm. Also, the color changes from orange to red when the depth is under 20 cm. The information is transferred into Android application through the internet. The Android application presents the current state of the building with the same view of the web page.</p>
 			

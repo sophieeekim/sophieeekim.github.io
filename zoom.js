@@ -2,8 +2,8 @@ var images = document.getElementsByClassName('zoom');
 var modal = document.getElementById('modal');
 var modalImages = document.getElementsByClassName('modal-images');
 var modalSwitch = false;
-var slidePrevious = document.getElementById('slide-previous');
-var slideNext = document.getElementById('slide-next');
+var slidePrevious = document.getElementById('modal-previous');
+var slideNext = document.getElementById('modal-next');
 var currentSlide = 14;
 
 
