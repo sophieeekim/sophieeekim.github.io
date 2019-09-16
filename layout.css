@@ -383,7 +383,7 @@ font-family: Avenir;
 	".  monitor monitor about-2 about-2 about-2 about-2 ."
 	". about-3 about-3 about-3 about-3 . . ."
 	". . practice-area practice-area . . . ."
-	". . . skill skill . . ."
+	". activity activity activity activity activity activity ."
 	". selected-works selected-works selected-works selected-works selected-works selected-works ."
 	". more-works more-works more-works more-works more-works more-works ."
 	". contact contact contact contact contact contact ."
@@ -411,6 +411,16 @@ font-family: Avenir;
 .intro{
 	grid-area:intro;
 	
+}
+
+.activity {
+	grid-area: activity;
+	
+}
+
+.activity-area {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
 }
 .note-anim {
 	grid-area: note;
