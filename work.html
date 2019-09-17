@@ -35,6 +35,7 @@
 				<li><a class="filter-item" id="filter-ux">UX/UI</a></li>
 				<li><a class="filter-item" id="filter-dev">Development</a></li>
 				<li><a class="filter-item" id="filter-visual">Visual Design</a></li>
+				<li><a class="filter-item" id="filter-play">Playground</a></li>
 			</ul>
 		</div>
 		<div class="work-list" id="gallery">
@@ -43,7 +44,7 @@
 				</div><div class="centered od-b" thumb-name="1"><h4><span>Alice's Adventure</span></h4><p><i>UX, UI</i></p></span></div></div>
 
 				<div class="work-thumb-text all ux" ><div class="work-thumb">
-				<a class="locked"><img class="work-item" thumb-name="2" src="images/omen-thumb.jpg" /></a>
+				<a class="locked" href="omen.html" ><img class="work-item" thumb-name="2" src="images/omen-thumb.jpg" /></a>
 				</div><div class="centered od-b" thumb-name="2"><h4><span>Internship at HP inc.</span></h4><p><i>UX, UI</i></p></div></div>
 
 
@@ -70,6 +71,12 @@
 				<div class="work-thumb-text all visual"><div class="work-thumb">
 				<a href="calendar.html"><img class="work-item" thumb-name="8"  src="images/calendar-thumb.jpg" /></a>
 				</div><div class="centered od-b" thumb-name="8"><h4><span>Look and Say Sequence Calender</span></h4><p><i>Visual Design</i></p></div></div>
+
+				<div class="work-thumb-text all dev play"><div class="work-thumb">
+				<a href="webdev.html"><img class="work-item" thumb-name="9"  src="images/webdev-thumb.jpg" /></a>
+				</div><div class="centered od-b" thumb-name="9"><h4><span>Practicing Web Development</span></h4><p><i>Development</i></p></div></div>
+	
+
 				
 		</div>
 	</div>
@@ -89,8 +96,8 @@
 </body>
 <script type="text/javascript">
 	function toggleGallery(event){
-		var gallery = document.getElementById('gallery');
-		var target= event.target;
+		const gallery = document.getElementById('gallery');
+		const target= event.target;
 		if(target.getAttribute('state') === 'gallery'){
 			target.setAttribute('src','images/list.svg');
 			target.setAttribute('state','list');
@@ -105,28 +112,26 @@
 	}
 
 	function hoverThumb(event){
-		var target = event.target;
-		var caption = document.getElementsByClassName("centered");
+		const target = event.target;
+		const caption = document.getElementsByClassName("centered");
 
 		if(target.getAttribute("thumb-name")) {
-			var l;
-			for(l=0; l<caption.length; l++){
-				if(target.getAttribute("thumb-name") == caption[l].getAttribute("thumb-name")){
-					caption[l].setAttribute("style","opacity:1;");
+			for (let element of caption) {
+				if(target.getAttribute("thumb-name") === element.getAttribute("thumb-name")){
+					element.setAttribute("style","opacity:1;");
 				}
 			}
 		}
 	}
 
 	function leaveThumb(event){
-		var target = event.target;
-		var caption = document.getElementsByClassName("centered");
+		const target = event.target;
+		const caption = document.getElementsByClassName("centered");
 
 		if(target.getAttribute("thumb-name")) {
-			var l;
-			for(l=0; l<caption.length; l++){
-				if(target.getAttribute("thumb-name") == caption[l].getAttribute("thumb-name")){
-					caption[l].setAttribute("style","opacity:0;");
+			for(let element of caption){
+				if(target.getAttribute("thumb-name") === element.getAttribute("thumb-name")){
+					element.setAttribute("style","opacity:0;");
 				}
 			}
 		}
@@ -134,15 +139,15 @@
 
 	function toggleFilter(event){
 		
-		var target = event.target;
-		var others = document.getElementsByClassName("filter-item");
-		var filter = target.getAttribute("id");
-		var selected_filter;
+		const target = event.target;
+		const others = document.getElementsByClassName("filter-item");
+		const filter = target.getAttribute("id");
+		let selected_filter = "";
 
-		var j;
-		for(j=0; j < others.length; j++){
-			others[j].setAttribute("style", "color: #000;");
+		for ( let element of others) {
+			element.setAttribute("style", "color: #000;");
 		}
+
 		target.setAttribute("style", "color:#4727F0;");
 
 		switch (filter){
@@ -159,46 +164,51 @@
 			case "filter-visual":
 				selected_filter = "visual";
 				break;
+			case "filter-play":
+				selected_filter = "play";
+				break;
 			default:
 				selected_filter ="all";
 				break;
 		}
 
-		var all_items = document.getElementsByClassName("work-thumb-text");
-		var filtered_items = document.getElementsByClassName(selected_filter);
-		var i;
-	
-		for(i=0; i< all_items.length; i++){
-			all_items[i].setAttribute("style", "display:none;");
+		const all_items = document.getElementsByClassName("work-thumb-text");
+		const filtered_items = document.getElementsByClassName(selected_filter);
+		
+		for( let item of all_items) {
+			item.setAttribute("style", "display:none;");
 		}
-
-		for(i=0; i< filtered_items.length; i++){
-			filtered_items[i].setAttribute("style", "display:block;");
+		
+		for ( let item of filtered_items) {
+			item.setAttribute("style", "display:block;");
 		}
-
 	}
 
-		var filterIcon = document.getElementById("filter-icon");
-		var all = document.getElementById("filter-all");
-		var ux = document.getElementById("filter-ux");
-		var dev = document.getElementById("filter-dev");
-		var visual = document.getElementById("filter-visual");
-	
-		filterIcon.addEventListener("click", function(){toggleGallery(event)});
-		all.addEventListener("click", function(){toggleFilter(event)});
-		ux.addEventListener("click", function(){toggleFilter(event)});
-		dev.addEventListener("click", function(){toggleFilter(event)});
-		visual.addEventListener("click",function(){toggleFilter(event)});
+		const filterIcon = document.getElementById("filter-icon");
+		const all = document.getElementById("filter-all");
+		const ux = document.getElementById("filter-ux");
+		const dev = document.getElementById("filter-dev");
+		const visual = document.getElementById("filter-visual");
+		const play = document.getElementById("filter-play");
+		
+		const toggleG = () => {toggleGallery(event);};
+		const toggleF = () => {toggleFilter(event);};
+		
+		filterIcon.addEventListener("click", toggleG);
+		all.addEventListener("click", toggleF);
+		ux.addEventListener("click", toggleF);
+		dev.addEventListener("click", toggleF);
+		visual.addEventListener("click", toggleF);
+		play.addEventListener("click", toggleF);
 
-		var thumb = document.getElementsByClassName("work-thumb-text");
-		var k;
-		for (k=0; k< thumb.length; k++){
-			thumb[k].addEventListener("mouseover", function(){ hoverThumb(event)});
-			thumb[k].addEventListener("mouseout", function(){ leaveThumb(event)});
+		const thumb = document.getElementsByClassName("work-thumb-text");
+		for (let each of thumb){
+			each.addEventListener("mouseover", function(){ hoverThumb(event)});
+			each.addEventListener("mouseout", function(){ leaveThumb(event)});
 		}
 
 
 
 </script>
-<script type="text/javascript" src="lock.js"></script>
+<!-- <script type="text/javascript" src="lock.js"></script> -->
 </html>
