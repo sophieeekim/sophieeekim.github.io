@@ -1,14 +1,15 @@
-var images = document.getElementsByClassName('zoom');
-var modal = document.getElementById('modal');
-var modalImages = document.getElementsByClassName('modal-images');
-var modalSwitch = false;
-var slidePrevious = document.getElementById('modal-previous');
-var slideNext = document.getElementById('modal-next');
-var currentSlide = 14;
+const images = document.getElementsByClassName('zoom');
+const modal = document.getElementById('modal');
+const modalImages = document.getElementsByClassName('modal-images');
 
+const slidePrevious = document.getElementById('modal-previous');
+const slideNext = document.getElementById('modal-next');
 
-for (var l=0; l < modalImages.length; l++) {
-	modalImages[l].setAttribute('fade','false');
+let currentSlide = 14;
+let modalSwitch = false;
+
+for(let img of modalImages){
+	img.setAttribute('fade','false');
 }
 
 slidePrevious.addEventListener('click', function(event) {
@@ -18,8 +19,8 @@ slidePrevious.addEventListener('click', function(event) {
 		currentSlide--;
 	}
 
-	for (var j=0; j<images.length; j++){
-			if(j == currentSlide){
+	for (let j=0; j<images.length; j++){
+			if(j === currentSlide){
 				modalImages[currentSlide].setAttribute('style','display: block;');
 
 			} else {
@@ -35,7 +36,7 @@ slideNext.addEventListener('click', function(event) {
 		currentSlide++;
 	}
 
-	for (var j=0; j<images.length; j++){
+	for (let j=0; j<images.length; j++){
 			if(j == currentSlide){
 				modalImages[currentSlide].setAttribute('style','display: block;');
 
@@ -46,20 +47,20 @@ slideNext.addEventListener('click', function(event) {
 });
 
 
-for( var i=0; i<images.length; i++){
+for( let i=0; i<images.length; i++){
 	images[i].addEventListener('click', function(event){
-		if(modalSwitch == false){
-		var target = event.target;
-		var slide = target.getAttribute('slide');
+		if(!modalSwitch){
+		const target = event.target;
+		const slide = target.getAttribute('slide');
 		currentSlide = slide;
 		modalSwitch = true;
-
-		for (var j=0; j<images.length; j++){
-			if(j == slide){
-				modalImages[slide].setAttribute('style','display: block;');
+		
+		for (let l=0; l<images.length; l++){
+			if(l == slide){
 				
+				modalImages[slide].setAttribute('style','display: block;');
 			} else {
-				modalImages[j].setAttribute('style','display: none;');
+				modalImages[l].setAttribute('style','display: none;');
 			}
 		}
 		
@@ -74,9 +75,9 @@ for( var i=0; i<images.length; i++){
 
 
 	
-for( var k=0; k<images.length; k++){
+for(let k=0; k<images.length; k++){
 	modalImages[k].addEventListener('click', function(event){
-		if(modalSwitch == true) {
+		if(modalSwitch) {
 			modal.classList.remove("fade-in");
 			modal.classList.add("fade-out");
 			setTimeout(function(){modal.setAttribute('style','display:none;');}, 500);
