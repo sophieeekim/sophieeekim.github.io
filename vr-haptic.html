@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="grid-project">
-	<div class="project-title"><img src="images/vrhaptic-thumb.jpg" /><div class="project-title-text"><h2><span  class="od-b">Improving VR Interface by Haptic Feedback and Gesture Detection</span></h2><p><i><span class="lg-b">Computer Science Capstone Project</span></i></p></div></div>
+	<div class="project-title"><img src="images/vrhaptic-thumb.jpg" /><div class="project-title-text"><h2><span  class="od-b">Improving VR Interface by Haptic Feedback and Gesture Detection</span></h2><h3><span class="lg-b">Computer Science Capstone Project</span></h3></div></div>
 	<div class="grid-project-text">
 		<div class="project-overview">
 			<h4 class="sub-title"><span>Project Overview</span></h4>
@@ -49,7 +49,7 @@
 				<p><b><i>Tools</i></b></p>
 				<p>Google Cardboard, Kinect, Unity3D (C#), Arduino</p>
 				<p><b><i>Prizes</i></b></p>
-				<p><span class="o-b">First Prize Winner</span> in Graduation Exhibition of Computer Science<br><span class="o-b">Semi-Finalist</span> in 13th Yonsei Creative Exhibition held by College of Engineering</p>
+				<p><span class="emphasize">First Prize Winner</span> in Graduation Exhibition of Computer Science<br><span class="emphasize">Semi-Finalist</span> in 13th Yonsei Creative Exhibition held by College of Engineering</p>
 
 	
 
@@ -60,7 +60,7 @@
 			<h4 class="sub-title"><span>Project Definition</span></h4>
 			<div class="content-text">
 				<img src="images/vr-haptic/0.jpg" />
-				<p>This project aims <span class="o-b">to improve current VR interface by designing a new input and output device.</span> Aside from HMD (Head Mounted Display), several input devices such as keyboard and gamepad are being used. However, most of these devices are not appropriate for VR interface since they are not intuitive and require users to pay attention to the devices constantly. For instance, if a keyboard is used as an input device for a VR game, the player should remember the position of the buttons and have a restricted space to move. Thus, in order to fully utilize the space and increase the sense of reality we developed an input device with Kinect sensor so that the user can naturally send input values using hand gestures. In addition, there are few output devices that could give a feedback to the users experiencing virtual reality. To enhance VR interface with a realistic feedback, we designed an output device using Arduino and vibration motor.</p>
+				<p>This project aims <span class="emphasize">to improve current VR interface by designing a new input and output device.</span> Aside from HMD (Head Mounted Display), several input devices such as keyboard and gamepad are being used. However, most of these devices are not appropriate for VR interface since they are not intuitive and require users to pay attention to the devices constantly. For instance, if a keyboard is used as an input device for a VR game, the player should remember the position of the buttons and have a restricted space to move. Thus, in order to fully utilize the space and increase the sense of reality we developed an input device with Kinect sensor so that the user can naturally send input values using hand gestures. In addition, there are few output devices that could give a feedback to the users experiencing virtual reality. To enhance VR interface with a realistic feedback, we designed an output device using Arduino and vibration motor.</p>
 
 
 			</div>
@@ -68,12 +68,12 @@
 			<div class="grid-two">
 				<div>
 					<img class="grid-two-icon" src="images/vr-haptic/2.png"/>
-					<p><i>Cordless Experience</i></p>
+					<h3>Cordless Experience</h3>
 					<p> There were several existing works regarding VR interface, but in majority of those works, the users could not utilize the space fully enough to move freely due to electrical cords. In contrary, we developed a system that provides cordless communication between Android and Kinect. In most cases of existing works, Oculus Rift was used so that the electrical cords were unavoidable. We designed WiFi communication between Android application and Kinect thus users can experience wireless interface using cordless HMD such as Google Cardboard.</p>
 				</div>
 				<div>
 					<img class="grid-two-icon"  src="images/vr-haptic/3.png"/>
-					<p><i>Wearable device with detailed feedback</i></p>
+					<h3>Wearable device with detailed feedback</h3>
 					<p>Existing controllers used as an input/output device for VR provide haptic feedback with no variation to users, since controller vibrate as a whole. However, we planed to develop a wearable output device which can provide various haptic feedback. According to the position of vibration motor, users can experience diverse feedbacks. For example, when a user touches a certain object in VR scene with his/her two fingers, only two vibration motors attached to those fingers will vibrate. This suggests possibilities of developing more realistic and natural output devices for VR.
 					</p>
 				</div>
@@ -87,13 +87,13 @@
 			<img class="single-img" src="images/vr-haptic/1.png" />
 			<div class="content-text">
 
-				<p><i>Input Device</i></p>
+				<h3>Input Device</h3>
 				<p>Kinect sensor detects the users’ movements and hand gestures. Then, it conveys the input signals to PC. In PC, Unity project analyzes the signals and sends those input values to the VR scene of the Android application via wifi connection. Since the Android application cannot receive the input values of Kinect sensor directly, network communication between PC and Android is inevitable. 
 				</p>
 				<img src="images/vr-haptic/4.png"/>
 				<p>In order to make the input device, we confirmed that the local host can convey PC client data to local host server successfully. Then, we installed Kinect extension plugin in Unity so that the PC client can analyze the input signals that comes from the Kinect sensor. Analyzed data is sent to Android application and is used as input values of VR scene.
 				</p>
-				<p><i>Output Device</i></p>
+				<h3>Output Device</h3>
 				<img src="images/vr-haptic/5.png"/>
 				<img src="images/vr-haptic/6.png"/>
 				<p>We developed the wearable output device using Arduino Uno and vibration motor. Arduino gives users different haptic feedbacks depending on the specific conditions through Bluetooth communication between VR Android application and Arduino. 
@@ -112,9 +112,9 @@
 			<div class="content-text">
 				<p>We conducted a user testing to evaluate our system in terms of interactivity and sense of reality. In this user testing, interactivity refers to the degree to which users agree to the conditions that give them a haptic feedback while experiencing the new system. Sense of reality signifies how much users feel real compared to existing system. 
 				</p>
-				<p><i>Task</i></p>
+				<h3>Task</h3>
 				<p>We designed an experiment in which participants were asked to play the VR game we used in the simulation twice – with and without our input and output devices. We recruited eight undergraduate students and divided them into two groups. Those who are in the first group played the game with our system first, then played without it. The second group are required to play the game without the system first, and then with the system. After the user testing, we conducted the individual survey. The questions were made up to see the satisfaction difference in terms of interactivity and sense of reality.</p>
-				<p><i>Results</i></p>
+				<h3>Results</h3>
 				<p>According to the survey conducted, average point of interactivity was 3.8 out of 5 and that of the sense of reality was 3.3 point. This indicates that majority of the participants were positive about our system. Limitation that some of the participants suggest was that the response time was quite slow due to wifi connection.</p>
 			</div>
 		</div>
