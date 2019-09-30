@@ -41,40 +41,40 @@
 		<div class="work-list" id="gallery">
 				<div class="work-thumb-text all ux"><div class="work-thumb">
 				<a href="alice-adventure.html"><img class="work-item" thumb-name="1" src="images/alice-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="1"><h4><span>Alice's Adventure</span></h4><p><i>UX, UI</i></p></span></div></div>
+				</div><div class="centered" thumb-name="1"><h4><span>Alice's Adventure</span></h4><p><i>UX, UI</i></p></span></div></div>
 
 				<div class="work-thumb-text all ux" ><div class="work-thumb">
-				<a class="locked" href="omen.html" ><img class="work-item" thumb-name="2" src="images/omen-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="2"><h4><span>Internship at HP inc.</span></h4><p><i>UX, UI</i></p></div></div>
+				<a href="omen.html" ><img class="work-item" thumb-name="2" src="images/omen-thumb.jpg" /></a>
+				</div><div class="centered " thumb-name="2"><h4><span>Internship at HP inc.</span></h4><p><i>UX, UI</i></p></div></div>
 
 
 				<!-- <div class="work-thumb-text all ux" ><div class="work-thumb">
 				<img class="work-item" thumb-name="3" src="images/pic-thumb.jpg" />
-				</div><div class="centered od-b" thumb-name="3"><h4><span >Picture Yourself</span></h4><p><i>UX, UI</i></p></div></div> -->
+				</div><div class="centered " thumb-name="3"><h4><span >Picture Yourself</span></h4><p><i>UX, UI</i></p></div></div> -->
 
 				<div class="work-thumb-text all dev ux"  ><div class="work-thumb">
 				<a href="bvw.html"><img class="work-item" thumb-name="4" src="images/bvw-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="4"><h4><span >Building Virtual Worlds</span></h4><p><i>Rapid Prototyping</i></p></div></div>
+				</div><div class="centered " thumb-name="4"><h4><span >Building Virtual Worlds</span></h4><p><i>Rapid Prototyping</i></p></div></div>
 
 				<div class="work-thumb-text all ux" ><div class="work-thumb">
 				<a href="sweepa.html"><img class="work-item" thumb-name="5"  src="images/sweepa-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="5"><h4><span>Sweepa: Indoor Waste Monitoring System</span></h4><p><i>UX Research</i></p></div></div>
+				</div><div class="centered " thumb-name="5"><h4><span>Sweepa: Indoor Waste Monitoring System</span></h4><p><i>UX Research</i></p></div></div>
 
 				<div class="work-thumb-text all dev" ><div class="work-thumb">
 				<a href="vr-haptic.html"><img class="work-item" thumb-name="6"  src="images/vrhaptic-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="6"><h4><span>VR Haptic Feedback</span></h4><p><i>Development</i></p></div></div>
+				</div><div class="centered " thumb-name="6"><h4><span>VR Haptic Feedback</span></h4><p><i>Development</i></p></div></div>
 
 				<div class="work-thumb-text all dev"><div class="work-thumb">
 				<a href="fluid.html"><img class="work-item" thumb-name="7"  src="images/fluid-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="7"><h4><span>Creating Fluid Animation from a Single Image</span></h4><p><i>Development</i></p></div></div>
+				</div><div class="centered " thumb-name="7"><h4><span>Creating Fluid Animation from a Single Image</span></h4><p><i>Development</i></p></div></div>
 
 				<div class="work-thumb-text all visual"><div class="work-thumb">
 				<a href="calendar.html"><img class="work-item" thumb-name="8"  src="images/calendar-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="8"><h4><span>Look and Say Sequence Calender</span></h4><p><i>Visual Design</i></p></div></div>
+				</div><div class="centered " thumb-name="8"><h4><span>Look and Say Sequence Calender</span></h4><p><i>Visual Design</i></p></div></div>
 
 				<div class="work-thumb-text all dev play"><div class="work-thumb">
 				<a href="webdev.html"><img class="work-item" thumb-name="9"  src="images/webdev-thumb.jpg" /></a>
-				</div><div class="centered od-b" thumb-name="9"><h4><span>Practicing Web Development</span></h4><p><i>Development</i></p></div></div>
+				</div><div class="centered " thumb-name="9"><h4><span>Practicing Web Development</span></h4><p><i>Development</i></p></div></div>
 	
 
 				
@@ -119,6 +119,7 @@
 			for (let element of caption) {
 				if(target.getAttribute("thumb-name") === element.getAttribute("thumb-name")){
 					element.setAttribute("style","opacity:1;");
+					element.classList.add("hoverThumbShadow");
 				}
 			}
 		}
@@ -132,6 +133,7 @@
 			for(let element of caption){
 				if(target.getAttribute("thumb-name") === element.getAttribute("thumb-name")){
 					element.setAttribute("style","opacity:0;");
+					element.classList.remove("hoverThumbShadow");
 				}
 			}
 		}
