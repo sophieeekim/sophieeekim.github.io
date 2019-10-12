@@ -22,22 +22,23 @@
 </head>
 
 <body class="work">
-	<img class="logo" src="images/logo.svg"/><h4 class="blue work-title">Sophie Eunkyeol Kim</h4>
-	<div class="nav">
-		<a href="index.html"><button class="nav-left-button">About</button></a>
-		<a href="#"><button class="nav-right-button">Work</button></a>
+		<!-- <button class="nav-left-button">About</button><h4 class="blue work-title">Sophie Eunkyeol Kim</h4> -->
+	<div class="nav-bar">
+		<a href="index.html"><img class="nav-left-button logo" src="images/logo.svg"/></a>
+		<a href="work.html"><button class="nav-right-button">Work</button></a>
+		
 	</div>
 	<div class="grid-work-content">
-		<div class="work-filter">
-			<ul>
-				<li class="filter-icon-item"><img id="filter-icon" state="gallery" src="images/gallery.svg"/></li>
-				<li><a class="filter-item" id="filter-all" style="color:#4727F0;">All</a></li>
-				<li><a class="filter-item" id="filter-ux">UX/UI</a></li>
-				<li><a class="filter-item" id="filter-dev">Development</a></li>
-				<li><a class="filter-item" id="filter-visual">Visual Design</a></li>
-				<li><a class="filter-item" id="filter-play">Playground</a></li>
-			</ul>
-		</div>
+			<div class="work-filter">
+					<ul>
+						<li class="filter-icon-item"><img id="filter-icon" state="gallery" src="images/gallery.svg"/></li>
+						<li><a class="filter-item" id="filter-all" style="color:#4727F0;">All</a></li>
+						<li><a class="filter-item" id="filter-ux">UX/UI</a></li>
+						<li><a class="filter-item" id="filter-dev">Development</a></li>
+						<li><a class="filter-item" id="filter-visual">Visual Design</a></li>
+						<li><a class="filter-item" id="filter-play">Playground</a></li>
+					</ul>
+			</div>
 		<div class="work-list" id="gallery">
 				<div class="work-thumb-text all ux"><div class="work-thumb">
 				<a href="alice-adventure.html"><img class="work-item" thumb-name="1" src="images/alice-thumb.jpg" /></a>
@@ -212,5 +213,6 @@
 
 
 </script>
+<script type="text/javascript" src="scroll.js"></script>
 <!-- <script type="text/javascript" src="lock.js"></script> -->
 </html>

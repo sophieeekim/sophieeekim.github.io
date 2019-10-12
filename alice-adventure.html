@@ -23,21 +23,22 @@
 </head>
 <body><!-- <img class="logo" src="images/logo.svg"/ "> -->
 	<div class="nav-bar">
-	
-	<div class="nav">
-		<a href="index.html"><button class="nav-left-button">About</button></a>
+		<a href="index.html"><img class="nav-left-button logo" src="images/logo.svg"/></button></a>
 		<a href="work.html"><button class="nav-right-button">Work</button></a>
-	</div>
 	</div>
 
 	<div class="nav-article-bar">
-		<a href="webdev.html"><button class="nav-left-button">Previous</button></a>
-		<a href="omen.html"><button class="nav-right-button">Next</button></a>
+		<a href="webdev.html"><button class="nav-left-button">
+				<svg class="nav-left-arrow" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/></svg>
+				Previous</button></a>
+		<a href="omen.html"><button class="nav-right-button">Next
+				<svg class="nav-right-arrow" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+		</button></a>
 		
 	</div>
 
 	<div class="grid-project">
-	<div class="project-title"><img class="project-title-img" src="images/alice-thumb.jpg" /><div class="project-title-text">
+	<div class="project-title"><img class="project-title-img" src="images/alice-article-thumb.jpg" /><div class="project-title-text">
 		<h2>Alice's Adventure</h2><h3>2D adventure game making tool for teaching game design that reinforce programming concepts</h3></div></div>
 	<div class="grid-project-text">
 		<div class="project-overview">
@@ -272,6 +273,8 @@
 	<div class="footer">
 		<p class="center">All Rights Reserved Sophie Eunkyeol Kim 2019</p>
 	</div>
+
+	<script src="scroll.js"></script>
 </body>
 </html>
 <style>
