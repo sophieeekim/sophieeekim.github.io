@@ -145,7 +145,7 @@
 				<h3>Adventure Game Design Language</h3>
 			</div>
 			
-				<div class="grid-four">
+				<!--div class="grid-four">
 					<h3>Inventory</h3>
 					<p class="cell"><i>Event</i>
 						<br><span class="emphasize">Combine A with B</span>
@@ -210,7 +210,7 @@
 						<br>Store in inventory
 						<br>Remove from inventory
 					</p>
-				</div>
+				</div-->
 
 			<div class="content-text">
 				<p>Based on the findings from paper prototype, we came up with <span class="emphasize">this list of words that can be used in adventure game design. </span> We divided these words in three categories - event, state, and reaction. This classification can lead students to think about how to make a game based on the three steps. It gives <span class="emphasize">more guidance to students.</span> Also, the three steps <span class="emphasize">align well with the programming patterns</span> as well. Event can represent the condition. State can represent a variable. Reaction indicates the result of if-statement. </p>
@@ -218,8 +218,30 @@
 				<h3>Wireframe</h3>
 				<p>After making changes in our design, we built a wireframe in order to test our new design. In new design, 1)<span class="emphasize">We discarded sandbox-style interface, and introduced step-by-step interface</span> which gives more guidance to students. 2) We discarded block-coding (object-driven coding). Instead, we introduced <span class="emphasize">global-driven interactions.</span></p>
 			</div>	
+			<div class="slide-window" window="0">
+				<button class="arrow-left"></button>
+				<button class="arrow-right"></button>
+				<div class="slide-view box-shadow">
+					<img class="slide-images slide-selected" src="images/alice/9.png">
+					<img class="slide-images" src="images/alice/10.png">
+					<img class="slide-images" src="images/alice/11.png">
+					<img class="slide-images" src="images/alice/12.png">
+					<img class="slide-images" src="images/alice/13.png">
+					<img class="slide-images" src="images/alice/14.png">
+					<img class="slide-images" src="images/alice/15.png">
+				</div>
+				<div class="slide-dots">
+					<span class="dot dot-selected"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>	
+			</div>
 
-				<div class="grid-two">
+				<!--div class="grid-two">
 					<div><img src="images/alice/9.png"/><h3>Step 0. Title Page</h3></div>
 					<div><img src="images/alice/10.png"/><h3>Step 1. Story Setting</h3> <p>Students are asked to think about the storyline of their game, and write down on the list. This enables students to think about basic story components of the adventure game - scenes, characters, and items.</p></div>
 					<div><img src="images/alice/11.png"/><h3>Step 2. Visualization</h3><p>Students can decorate their scene by replacing the placeholders with actual images. They can always go back to previous step in order to change the story.</p></div>
@@ -227,7 +249,7 @@
 					<div><img src="images/alice/13.png"/><h3>Step 4. Setting the transition</h3><p> Students can connect the scenes by using interaction boxes </p></div>
 					<div><img src="images/alice/14.png"/><h3>Step 5. Filling the gap </h3><p> Now students are asked to build the rest of the interactions by themselves.</p></div>
 					<div><img src="images/alice/15.png"/><h3>Open Interface</h3></div>
-				</div>
+				</div-->
 
 				<h4 class="sub-title"><span>Production</span></h4>
 				<div class="grid-two">
@@ -275,6 +297,7 @@
 	</div>
 
 	<script src="scroll.js"></script>
+	<script src="slide.js"></script>
 </body>
 </html>
 <style>
