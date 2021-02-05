@@ -345,8 +345,8 @@ li{
 	position: relative;
 	padding:10px;
 }
-.sub-title span::after{
-	/* border-bottom: 2px solid var(--primary-color); */
+/* .sub-title span::after{
+	border-bottom: 2px solid var(--primary-color); 
 	position: absolute;
  	 content: "";
 	left: 0;
@@ -360,7 +360,7 @@ li{
 	-ms-transform:rotate(-5deg);
 	-o-transform:rotate(-5deg);
 	transform:rotate(-5deg);
-}
+}*/
 .nav-bar {
 	position: fixed;
 	top:0;
