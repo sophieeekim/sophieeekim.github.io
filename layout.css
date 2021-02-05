@@ -233,7 +233,7 @@ h4 {
 
 h3 {
 	font-family: Avenir;
-	font-weight: 700;
+	/* font-weight: 700; */
 	font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -241,7 +241,7 @@ h3 {
   opacity: 0.7;
   font-size: 1em;
   padding-top: 5%;
-
+  color: #000000;
 }
 i {
 	font-family: Avenir;
@@ -335,17 +335,18 @@ li{
 
 .sub-title {
 	text-align: center;
+	
 	margin-bottom:5%;
 	margin-top:10%;
 	margin-left: 5%;
 	margin-right: 5%;
 	
 }
-.sub-title span {
+/*.sub-title span {
 	position: relative;
 	padding:10px;
 }
-/* .sub-title span::after{
+ .sub-title span::after{
 	border-bottom: 2px solid var(--primary-color); 
 	position: absolute;
  	 content: "";
