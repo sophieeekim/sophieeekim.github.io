@@ -233,13 +233,13 @@ h4 {
 
 h3 {
 	font-family: Avenir;
-	/* font-weight: 700; */
+	font-weight: normal;
 	font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  opacity: 0.7;
-  font-size: 1em;
+  /* opacity: 0.7;
+  font-size: 1em; */
   padding-top: 5%;
   color: #000000;
 }
@@ -1255,8 +1255,8 @@ margin-top:10%;
 	
 }
 .project-title-img {
-	-webkit-clip-path : polygon(100% 10%, 100% 80%, 0% 80%, 0% 50%);
-	clip-path: polygon(100% 10%, 100% 80%, 0% 80%, 0% 50%);
+	/* -webkit-clip-path : polygon(100% 10%, 100% 80%, 0% 80%, 0% 50%);
+	clip-path: polygon(100% 10%, 100% 80%, 0% 80%, 0% 50%); */
 }
 .project-title h2{
 	color:#000;
