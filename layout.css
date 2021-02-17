@@ -240,7 +240,7 @@ h3 {
   letter-spacing: normal;
   /* opacity: 0.7;
   font-size: 1em; */
-  padding-top: 5%;
+  /* padding-top: 5%; */
   color: #000000;
 }
 i {
@@ -1294,7 +1294,7 @@ margin-top:10%;
 
 .project-title-text h2{
 	margin:0;
-	padding:0;
+	padding-bottom:1%;
 	color:#fff;
 	animation: projectTitleTextAnim 0.5s ease forwards;
 }
@@ -1627,10 +1627,10 @@ margin-top:10%;
 		font-size: 16px;
 	}
 	h2 {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	h3 {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	h4 {
 		font-size: 16px;
@@ -1684,9 +1684,15 @@ margin-top:10%;
 	.project-title{
 		/* margin-top: 50px; */
 		height: 200px;
+		
 		top:5vw;
 	}
 	
+	.project-title-text {
+		width:75vw;
+		margin: auto;
+		
+	}
 	.work-list {
 		    grid-template-areas: "a";
 		
@@ -1906,10 +1912,10 @@ margin-top:10%;
 		font-size: 24px;
 	}
 	h3 {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	h4 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.nav-left-button, .nav-right-button {
 		font-size: 20px;
@@ -1919,11 +1925,10 @@ margin-top:10%;
 	display: -ms-grid;
 	display: grid;
 
-	-ms-grid-columns: 1fr 2% 3fr 2% 1fr 2% 3fr;
-
+	-ms-grid-columns: 1fr 2% 3fr 3% 1fr 2% 3fr;
 	grid-template-columns: 1fr 3fr 1fr 3fr;
 	grid-column-gap: 2%;
-	    grid-template-areas: 
+	grid-template-areas: 
 	"a a a a"
 	}
 	
@@ -1954,7 +1959,7 @@ margin-top:10%;
 		font-size: 16px !important;
 	}
 	p, ul, .link-button {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	h2 {
 		font-size: 30px;
@@ -2020,9 +2025,11 @@ margin-top:10%;
 		font-size: 16px !important;
 	}
 	p, ul {
+		font-size: 16px !important;
+	}
+	h3 {
 		font-size: 18px;
 	}
-
 	h4{
 		font-size: 18px;
 	}
@@ -2034,6 +2041,17 @@ margin-top:10%;
 /* Extra large devices (large HD laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1600px) {
 	
-	
+	.grid-project p {
+		font-size: 20px !important;
+	}
+	p, ul {
+		font-size: 20px !important;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4{
+		font-size: 24px;
+	}
 	
 }
