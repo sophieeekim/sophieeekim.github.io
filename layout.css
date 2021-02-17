@@ -171,7 +171,7 @@
 
 }
 .footer p {
-	font-size: 8pt;
+	font-size:12pt;
 }
 
 .background-img {
@@ -1621,22 +1621,22 @@ margin-top:10%;
 	}
 
 	.link-button{
-		font-size: 11px;
+		font-size: 14px;
 	}
 	p, ul{
-		font-size: 12px;
-	}
-	h2 {
 		font-size: 16px;
 	}
+	h2 {
+		font-size: 14px;
+	}
 	h3 {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	h4 {
-		font-size: 12px;
+		font-size: 16px;
 	}
 	.nav-left-button, .nav-right-button{
-		font-size: 15px;
+		font-size: 18px;
 		margin:10px;
 	}
 	.logo {
@@ -1700,7 +1700,8 @@ margin-top:10%;
 		margin-right: 0;
 	}
 	.content-text { /* main text area */
-	width:280px;
+	/* width:280px; */
+	width: 100%;
 	margin: auto;
 	}
 
@@ -1830,18 +1831,20 @@ margin-top:10%;
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-	
-	p,ul, .link-button {
-		font-size: 12px;
+	.link-button{
+		font-size: 14px;
+	}
+	p, ul{
+		font-size: 16px;
 	}
 	h2 {
-		font-size: 20px;
+		font-size: 14px;
 	}
 	h3 {
-		font-size: 11px;
+		font-size: 14px;
 	}
-	h4{
-		font-size: 12px;
+	h4 {
+		font-size: 16px;
 	}
 
 	.nav-bar{
@@ -1893,17 +1896,20 @@ margin-top:10%;
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	p, ul, .link-button {
-		font-size: 13px;
+	.link-button{
+		font-size: 14px;
+	}
+	p, ul{
+		font-size: 16px;
 	}
 	h2 {
 		font-size: 24px;
 	}
 	h3 {
-		font-size: 13px;
+		font-size: 14px;
 	}
-	h4{
-		font-size: 15px;
+	h4 {
+		font-size: 16px;
 	}
 	.nav-left-button, .nav-right-button {
 		font-size: 20px;
@@ -1945,10 +1951,10 @@ margin-top:10%;
 		font-size: 14px;
 	}
 	.grid-project p {
-		font-size: 14px !important;
+		font-size: 16px !important;
 	}
 	p, ul, .link-button {
-		font-size: 16px;
+		font-size: 18px;
 	}
 	h2 {
 		font-size: 30px;
@@ -2011,7 +2017,7 @@ margin-top:10%;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	.grid-project p {
-		font-size: 15px !important;
+		font-size: 16px !important;
 	}
 	p, ul {
 		font-size: 18px;
