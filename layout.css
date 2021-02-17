@@ -394,7 +394,7 @@ li{
 	
 }
 .nav-article-bar button {
-	font-family: AvenirLight !important;
+	/* font-family: AvenirLight !important; */
 	font-style: oblique !important;
 	font-size: 1em !important;
 }
@@ -467,7 +467,8 @@ li{
 }
 
 .nav-left-arrow {
-	padding-right: 20%;
+	padding-right: 10%;
+	
 }
 
 .nav-left-button {
